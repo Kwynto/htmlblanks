@@ -160,7 +160,7 @@ body {
 .main .topbar .search label ion-icon {
     position: absolute;
     left: 10px;
-    top: 4px;
+    top: 8px;
     font-size: 1.5em;
 }
 
@@ -176,8 +176,6 @@ body {
 
 .main .topbar .user img {
     position: absolute;
-    /* width: 50px;
-    height: 50px; */
     top: 0;
     left: 0;
     width: 100%;
@@ -192,5 +190,30 @@ body {
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+.main .cardBox .card {
+    position: relative;
+    background: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.main .cardBox .card .numbers {
+    position: relative;
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.main .cardBox .card .cardName {
+    color: #999999;
+}
+
+.main .cardBox .card .iconBox {
+    font-size: 2.5em;
+    color: #03a9f4;
 }
