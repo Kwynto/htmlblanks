@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <!-- <ion-icon name="cube"></ion-icon> -->
+                            <ion-icon name="logo-tux"></ion-icon>
+                        </span>
+                        <span class="title"><h2>Brand Name</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people"></ion-icon></span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="chatbubbles"></ion-icon></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="help-circle"></ion-icon></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="cog"></ion-icon></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="key"></ion-icon></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="user.jpeg">
+                </div>
+            </div>
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,042</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">82</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="cart"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">208</div>
+                        <div class="cardName">Comments</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="chatbubble"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">$6,042</div>
+                        <div class="cardName">Earning</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="cash"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

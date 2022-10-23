@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* Menu block */
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #003147;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active {
+    width: 60px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: #03a9f4;
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 20px;
+}
+.navigation ul li:nth-child(1):hover {
+    background: transparent;
+}
+
+.navigation ul li a {
+    position: relative;
+    /* display: block; */
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.navigation ul li a .icon .fa {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+/* Main block */
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: #f5f5f5;
+    transition: 0.5s;
+}
+.main.active {
+    width: calc(100% - 60px);
+    left: 60px;
+}
+
+/* TopBar */
+
+.main .topbar {
+    width: 100%;
+    background: #ffffff;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main .topbar .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* background: #ff0000; */
+    cursor: pointer;
+    font-size: 3em;
+    text-align: center;
+}
+.main .topbar .toggle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111111;
+}
+
+.main .topbar .search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+
+}
+
+.main .topbar .search label {
+    position: relative;
+    width: 100%;
+}
+
+.main .topbar .search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 40px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main .topbar .search label ion-icon {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    font-size: 1.5em;
+}
+
+.main .topbar .user {
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main .topbar .user img {
+    position: absolute;
+    /* width: 50px;
+    height: 50px; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CardBox */
+
+.main .cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
