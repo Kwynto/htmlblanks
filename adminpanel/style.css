@@ -217,3 +217,109 @@ body {
     font-size: 2.5em;
     color: #03a9f4;
 }
+
+.main .details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+.main .details .recentOrders {
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.main .details .recentOrders .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main .details .recentOrders .cardHeader h2 {
+    font-weight: 600;
+}
+
+.main .details .recentOrders .cardHeader .btn {
+    position: relative;
+    padding: 5px 10px;
+    background: #03a9f4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.main .details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.main .details table thead td {
+    font-weight: 600;
+}
+
+.main .details .recentOrders table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.main .details .recentOrders table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.main .details .recentOrders table tbody tr:hover {
+    background: #03a9f4;
+    color: #ffffff;
+}
+
+.main .details .recentOrders table tr td {
+    padding: 9px 5px;
+}
+
+.main .details .recentOrders table thead tr td:last-child,
+.main .details .recentOrders table tbody tr td:last-child {
+    text-align: right;
+}
+
+.main .details .recentOrders table thead tr td:nth-child(2),
+.main .details .recentOrders table tbody tr td:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.main .details .recentOrders table thead tr td:nth-child(3),
+.main .details .recentOrders table tbody tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status {
+    position: relative;
+    padding: 2px 4px;
+    background: #ff0000;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.delivered {
+    background: #8de02c;
+}
+.pending {
+    background: #f9ca3f;
+}
+.return {
+    background: #ff0000;
+}
+.inprogress {
+    background: #1795ce;
+}
+
+
