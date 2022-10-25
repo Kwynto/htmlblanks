@@ -115,7 +115,7 @@ body {
 
 }
 
-.main .topbar .toggle {
+.toggle {
     position: relative;
     width: 60px;
     height: 60px;
@@ -124,7 +124,7 @@ body {
     font-size: 3em;
     text-align: center;
 }
-.main .topbar .toggle::before {
+.toggle::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -186,7 +186,7 @@ body {
 
 /* CardBox */
 
-.main .cardBox {
+.cardBox {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -219,7 +219,7 @@ body {
     color: #03a9f4;
 }
 
-.main .details {
+.details {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -238,13 +238,13 @@ body {
     padding: 20px;
 }
 
-.main .details  .recentOrders .cardHeader {
+.main .details .recentOrders .cardHeader {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.main .details .cardHeader h2 {
+.cardHeader h2 {
     font-weight: 600;
 }
 
@@ -373,3 +373,68 @@ body {
 
 /* Responsive */
 
+@media (max-width: 992px) {
+    .navigation {
+        left: -300px;
+    }
+    .navigation.active {
+        left: 0;
+        width: 300px;
+    }
+    .main {
+        width: 100%;
+        left: 0;
+    }
+    .main.active {
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .cardBox {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .details {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details .recentOrders {
+        overflow-x: auto;
+    }
+    .details .recentOrders table {
+        width: 600px;
+    }
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active {
+        position: fixed;
+        z-index: 1100;
+        right: 0;
+        left: initial;
+    }
+    .toggle.active ion-icon {
+        color: #ffffff;
+    }
+    .main,
+    .main.active {
+        width: 100%;
+        left: 0;
+    }
+}
