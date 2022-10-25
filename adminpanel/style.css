@@ -115,7 +115,7 @@ body {
 
 }
 
-.main .topbar .toggle {
+.toggle {
     position: relative;
     width: 60px;
     height: 60px;
@@ -124,7 +124,7 @@ body {
     font-size: 3em;
     text-align: center;
 }
-.main .topbar .toggle::before {
+.toggle::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -170,6 +170,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
     overflow: hidden;
     cursor: pointer;
 }
@@ -185,7 +186,7 @@ body {
 
 /* CardBox */
 
-.main .cardBox {
+.cardBox {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -218,19 +219,20 @@ body {
     color: #03a9f4;
 }
 
-.main .details {
+.details {
     position: relative;
     width: 100%;
     padding: 20px;
     padding-top: 0;
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: 2fr 1fr;
 
 }
 
 .main .details .recentOrders {
     position: relative;
-    display: grid;
+    /* display: grid; */
     min-height: 530px;
     background: #ffffff;
     padding: 20px;
@@ -242,11 +244,11 @@ body {
     align-items: flex-start;
 }
 
-.main .details .recentOrders .cardHeader h2 {
+.cardHeader h2 {
     font-weight: 600;
 }
 
-.main .details .recentOrders .cardHeader .btn {
+.main .details .cardHeader .btn {
     position: relative;
     padding: 5px 10px;
     background: #03a9f4;
@@ -265,25 +267,25 @@ body {
     font-weight: 600;
 }
 
-.main .details .recentOrders table tr {
+.main .details table tr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.main .details .recentOrders table tbody tr:last-child {
+.main .details table tbody tr:last-child {
     border-bottom: none;
 }
 
-.main .details .recentOrders table tbody tr:hover {
+.main .details table tbody tr:hover {
     background: #03a9f4;
     color: #ffffff;
 }
 
-.main .details .recentOrders table tr td {
+.main .details table tr td {
     padding: 9px 5px;
 }
 
-.main .details .recentOrders table thead tr td:last-child,
-.main .details .recentOrders table tbody tr td:last-child {
+.main .details table thead tr td:last-child,
+.main .details table tbody tr td:last-child {
     text-align: right;
 }
 
@@ -322,4 +324,117 @@ body {
     background: #1795ce;
 }
 
+.main .details .recentCustomers {
+    position: relative;
+    /* display: grid; */
+    min-width: 530px;
+    background: #ffffff;
+    padding: 20px;
+}
 
+.main .details .recentCustomers .imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main .details .recentCustomers .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .details .recentCustomers table tr td h4 span {
+    font-size: 14px;
+    color: #999999;
+}
+
+.main .details .recentCustomers table tr:hover,
+.main .details .recentCustomers table tr:hover td h4 span {
+    background: #03a9f4;
+    color: #ffffff;
+}
+
+.main .details .recentCustomers table tr td {
+    padding: 7px 10px;
+    text-align: left;
+}
+
+.main .details .recentCustomers table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .navigation {
+        left: -300px;
+    }
+    .navigation.active {
+        left: 0;
+        width: 300px;
+    }
+    .main {
+        width: 100%;
+        left: 0;
+    }
+    .main.active {
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .cardBox {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .details {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBox {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details .recentOrders {
+        overflow-x: auto;
+    }
+    .details .recentOrders table {
+        width: 600px;
+    }
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active {
+        position: fixed;
+        z-index: 1100;
+        right: 0;
+        left: initial;
+    }
+    .toggle.active ion-icon {
+        color: #ffffff;
+    }
+    .main,
+    .main.active {
+        width: 100%;
+        left: 0;
+    }
+}
