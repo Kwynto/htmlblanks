@@ -423,7 +423,7 @@ body {
         left: 0;
     }
     .toggle.active {
-        position: fixed;
+        position: absolute;
         z-index: 110;
         right: 0;
         left: initial;
