@@ -227,6 +227,16 @@ body {
     grid-template-columns: 2fr 1fr;
 }
 
+.details2 {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+}
+
 .details .recentOrders {
     position: relative;
     min-height: 530px;
@@ -299,7 +309,7 @@ body {
 .status {
     position: relative;
     padding: 2px 4px;
-    background: #ff0000;
+    background: #0c0303;
     color: #ffffff;
     border-radius: 4px;
     font-size: 14px;
@@ -317,6 +327,22 @@ body {
     background: #ff0000;
 }
 .inprogress {
+    background: #1795ce;
+}
+
+.ok {
+    background: #8de02c;
+}
+.error {
+    background: #ff0000;
+}
+.warning {
+    background: #f9ca3f;
+}
+.danger {
+    background: #d40e71;
+}
+.process {
     background: #1795ce;
 }
 
@@ -368,6 +394,56 @@ body {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2em;
+}
+
+.details2 .recentOther {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.details2 table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details2 table thead td {
+    font-weight: 600;
+}
+
+.details2 .recentOther table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details2 .recentOther table tbody tr td:first-child {
+    width: 80px;
+}
+
+.details2 .recentOther table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.details2 .recentOther table tbody tr:hover {
+    background: #03a9f4;
+    color: #ffffff;
+}
+
+.details2 .recentOther table tr td {
+    padding: 9px 5px;
+    text-align: center;
+}
+
+.details2 .recentOther table thead tr td:last-child,
+.details2 .recentOther table tbody tr td:last-child {
+    text-align: right;
+}
+
+.details2 .recentOther table thead tr td:nth-child(2),
+.details2 .recentOther table tbody tr td:nth-child(2) {
+    text-align: left;
+    padding-right: 20px;
 }
 
 /* Responsive */
