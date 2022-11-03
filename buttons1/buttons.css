@@ -83,7 +83,7 @@ body {
     box-shadow: 5px 5px 5px #121212 inset, -5px -5px 5px #212121 inset;
 }
 
-/* Steel button */
+/* Steel buttons */
 
 .btn-red {
     background: linear-gradient(-45deg, red, orange, yellow);
@@ -134,4 +134,57 @@ body {
 .btn-dark:hover {
     background: linear-gradient(45deg, #181a22, #3c3c3d);
     box-shadow: 0 5px 30px #050505, 0 -5px 30px #050505;
+}
+
+/* Modern buttons */
+
+.modern-btn-red {
+    background: red;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.modern-btn-red:hover {
+    border-radius: 30px;
+}
+
+.modern-btn-green {
+    background: #32ff54;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.modern-btn-green:hover {
+    border-radius: 30px;
+}
+
+.modern-btn-blue {
+    background: blue;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.modern-btn-blue:hover {
+    border-radius: 30px;
+}
+
+.modern-btn-light {
+    background: #f9f9fa;
+    color: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.modern-btn-light:hover {
+    border-radius: 30px;
+}
+
+.modern-btn-dark {
+    background: #181a22;
+    border: 1px solid white;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+.modern-btn-dark:hover {
+    border-radius: 30px;
 }
